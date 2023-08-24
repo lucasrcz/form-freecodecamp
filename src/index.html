@@ -9,7 +9,28 @@
         <h1 id="title">Formulário de Inscrição de Bandas do Festival Escola De Música</h1>
         <p id="description">Um formulário para inscrições dos alunos da banda dos alunos da escola de música</p>
         <form action="POST" id="survey-form">
-        <label for="name">Nome da Banda: <input type="text" id="name" required></label>
+        <label for="name" id="name-label" >Nome da Banda: <input type="text" id="name" required placeholder="Meninos Mutantes"></label>
+        <label for="email"id="email-label">Email da banda:<input type ="email" id="email" required placeholder="email@email.com.br"></label>
+        <label for="number"id="number-label">Integrantes da banda:<input type="number" id="number" min="1" max="6"></label>
+        <label for="generos">
+            <select name="generos" id="dropdown">
+                <option value="">Selecione um gênero</option>
+                <option value="Rock">Rock</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Samba">Samba</option>
+                <option value="MPB">MPB</option>
+                <option value="Indie">Indie</option>
+                <option value="Outros">Outros</option>
+            </select>
+        </label>
+        <label">Qual palco você está se candidatando?
+            <label for="palco-tipo">Palco Urubu Malandro<input id="palco-tipo" type="radio" name="palco-tipo" value="Urubu"></label>
+            <label for="palco-tipo">Palco Garça Namoradeira<input type="radio" name="palco-tipo" value="Garça"></label>
+        </label>
+        <label>Condições de Inscrição:
+            <label for="condicoes-evento"><input type="checkbox" value="maior de idade" required>Todos os Integrantes da banda são maiores de idade</label>
+            <label for="condicoes-evento"><input type="checkbox" value="aceito os termos do evento" required>Concordo com todas as regras do edital do evento</label>
+        </label>
         </form>
     </div>
 </body>
